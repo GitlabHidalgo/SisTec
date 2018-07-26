@@ -16,5 +16,21 @@ namespace SisTec
         {
             InitializeComponent();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Deseja finalizar o SOSTecVip System?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resposta == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Data Atual: " + DateTime.Now.ToShortDateString()+ "  ";
+            toolStripStatusLabel2.Text = "Hora Atual: " + DateTime.Now.ToLongTimeString() + "  ";
+            toolStripStatusLabel3.Text = "Usuário Logado: " + "Arnaldo Martins Hidalgo Jr.";
+        }
     }
 }
